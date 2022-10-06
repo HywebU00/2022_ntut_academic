@@ -1,0 +1,102 @@
+ /* sitemap */
+ .sitemap {
+   margin: 0px auto 1em;
+   @extend %clearfix;
+   background: rgba(242, 242, 242, .7);
+   padding: 2em 3em;
+   border-radius: 10px;
+   @include screen('mobile') {
+    padding: 1em;
+}
+p {
+   font-size: .813em;
+   kbd {
+       border: 1px solid #AAA;
+       background: transparent;
+       color: $color-word;
+       padding:0 .3em;
+       margin: 0 .2em .1em;
+       kbd {
+           border: none;
+       }
+   }
+}
+.accesskeyDefine {
+   padding: 1em 2em;
+   background: #EEE;
+   border-radius: 6px;
+   li {
+       margin-bottom: .2em;
+   }
+}
+}
+$sitemapLength : 4;
+$sitemapWidth:100%/ $sitemapLength;
+.cascading {
+   // border-top: 1px solid #CCC;
+   @include gutter;
+   box-sizing: border-box;
+   margin-top: 1em;
+   ul {
+       @include li-reset;
+   }
+   li {
+       line-height: 1.5;
+       width: $sitemapWidth;
+       display: inline-block;
+       vertical-align: top;
+         margin: 0 -5px 1em 0; // margin-right:改為負5;
+         box-sizing: border-box;
+         padding: 0px .5em;
+         a {
+           margin: .2em 0;
+           color: #222;
+           padding: .5em .8em;
+           display: block;
+           font-size: 1.125em;
+           font-weight: bold;
+           background:$primaryColor;
+           color:#fff;
+           border-radius: 5px;
+           &:hover,
+           &:focus {
+            color: #fff;
+            text-decoration: none;
+            background: darken($primaryColor, 5);
+        }
+    }
+    ul {
+        padding: 0 .5em;
+        li {
+           width: 100%;
+           display: block;
+           margin-bottom: 0;
+           padding: 0;
+           a {
+               display: block;
+               font-size: 1em;
+               padding: .2em .3em .4em;
+               border-bottom: 1px solid #dcdcdc;
+               background-color: transparent;
+               font-weight: normal;
+               color:$color-word;
+               line-height: 1.5em;
+               border-radius: 0;
+               &:hover,
+               &:focus {
+                   color: $primaryColor !important;
+                   text-decoration: none;
+                   background: none;
+               }
+           }
+       }
+   }
+}
+@include screen('mobile') {
+   width: 95%;
+   margin: 0px auto;
+   li {
+       width: 100%;
+   }
+}
+}

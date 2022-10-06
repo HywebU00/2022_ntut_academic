@@ -1,0 +1,103 @@
+.tabSet {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    @extend %clearfix;
+    @include screen('mobile') {
+        width: auto;
+        height: auto !important;
+    }
+}
+.tabs {
+    position: relative;
+
+    &>.tabItem {
+        &.active {
+            background-color: $color-blue;
+            color: #FFF;
+        }
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-size:1em;
+        line-height: 1;
+        display: block;
+        padding: 16px 0 14px;
+        text-align: center;
+        background-color:$color-gray2;
+        color: $color-word;
+        font-weight: bold;
+        text-decoration: none;
+
+        @include text-overflow;
+        box-sizing: border-box;
+        &:hover, &:focus {
+            background-color: $color-blue;
+            color: #FFF;            
+        }
+        @include screen('mobile') {
+            float: none;
+            width: 100% !important;
+            border-bottom: 1px solid #888;
+            &.active {
+                border-color: #bbb;
+            }
+        }
+    }
+}
+//多組 可設定差異
+.example-2 {
+    .tabItem:hover {
+        background: $secondaryColor;
+    }
+    .tabItem.active {
+        background: $secondaryColor;
+    }
+}
+// 顯示content
+.active+.tabContent {
+    display: block;
+}
+.tabContent {
+    position: absolute;
+    top: 50px!important;
+    left: 0;
+    right: 0;
+    clear: both;
+    padding: 20px 20px 30px;
+    display: none;
+    @include screen('mobile') {
+        position: static;
+    }
+    ul {
+        @include li-reset;
+    }
+    li {
+        margin: 0;
+        padding: .5em 0 .5em 2em;
+        line-height: 1.6;
+        border-bottom: 1px #D9D9D9 solid;
+        position: relative;
+        &:before{
+            content:'·';
+            position: absolute;
+            left:.5em;
+            top:.5em;
+            width: 1em;
+            height: 1em;
+        }
+        @include screen('mobile') {
+            @include text-overflow();
+        }
+        a {
+            @include aSetting_nocolor;
+            display: block;
+        }
+        time {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            font-size: .813em;
+            color: #666;
+        }
+    }
+}
