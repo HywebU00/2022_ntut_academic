@@ -40,7 +40,6 @@ body {
     position: relative;
     margin: 0 auto;
     padding-top: 0!important;
-    margin-top: 10.5em;
     @include screen('mobile') {
         margin-top: 60px;
     }
@@ -65,10 +64,11 @@ body {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
-        min-height: 600px;
+        min-height: 760px;
         padding: 0px 30px 2em;
         @include screen('mobile') {
             padding: 20px 30px 2em;
+            min-height: auto;
 
         }
         // h3{

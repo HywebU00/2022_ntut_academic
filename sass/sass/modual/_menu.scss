@@ -20,40 +20,41 @@
     background: -webkit-linear-gradient(90deg, rgba(1,156,158,1) 0%, rgba(0,65,67,1) 70%, rgba(0,116,153,1) 100%);
     background: linear-gradient(90deg, rgba(1,156,158,1) 0%, rgba(0,65,67,1) 70%, rgba(0,116,153,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#019c9e",endColorstr="#007499",GradientType=1);
-    // &.sticky {
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     z-index: 999;
-    //     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    //     &:after {
-    //         position: absolute;
-    //         content: '';
-    //         width: 100%;
-    //         height: 100%;
-    //         top: 0;
-    //         left: 0;
-    //         z-index: -1;
-    //     }
-    //     &>ul {
-    //         width: 100%;
-    //         max-width: 1200px;
-    //         margin: 0 auto;
-    //     }
-    // }
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        &>ul {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
     @include screen('mobile') {
         display: none;
     }
     // 預設選單 ul
     >ul {
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center; 
+        max-width: 1200px;
 
         // 第一層選單樣式
         >li {

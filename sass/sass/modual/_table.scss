@@ -288,11 +288,18 @@ table {
 
 .nametitle{
     text-align: center;
-    // font-weight: 500;
     width: 20%;
     @include screen('mobile') {
       width: auto;  
   }
+  a{
+    color: $primaryColor;
+    &:hover, &:focus{
+        color:$secondaryColor;
+        text-decoration: underline;
+    }
+}
+
 }
 .resroom{
     list-style: none;
@@ -314,10 +321,9 @@ table {
         }
         a{
             color: $primaryColor;
-            text-decoration: underline;
             &:hover, &:focus{
                 color:$secondaryColor;
-                text-decoration: none;
+                text-decoration: underline;
             }
         }
     }

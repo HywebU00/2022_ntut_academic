@@ -96,7 +96,13 @@ h1.title, h2.title {
     }
   }
   a {
-    @include aSetting;
+    // @include aSetting;
+    color:$primaryColor;
+    &:hover, &:focus{
+      color:$secondaryColor;
+      text-decoration: underline;
+
+    }
   }
 }
 
