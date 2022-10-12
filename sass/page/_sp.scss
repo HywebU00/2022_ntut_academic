@@ -85,12 +85,13 @@
       }
     }
     .btn{
-      background: $color-blue;
+      background: #fff;
       padding: .2em 1em .25em .5em;
-      color:#fff;
+      color:$primaryColor;
       border-radius: 5px;
+      border: solid 1px $color-gray;
       &:hover, &:focus{
-        background: darken($color-blue, 10);
+        color:$secondaryColor;
       }
     }
     a{

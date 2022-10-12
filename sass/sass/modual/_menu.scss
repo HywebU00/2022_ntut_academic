@@ -14,7 +14,7 @@
     position: relative;
     z-index: 99;
     clear: both;
-    font-family: 'Noto Sans CJK TC';
+    // font-family: 'Noto Sans CJK TC';
     background: rgb(1,156,158);
     background: -moz-linear-gradient(90deg, rgba(1,156,158,1) 0%, rgba(0,65,67,1) 70%, rgba(0,116,153,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(1,156,158,1) 0%, rgba(0,65,67,1) 70%, rgba(0,116,153,1) 100%);
@@ -63,7 +63,7 @@
                 display: block;
                 padding: .4em 1em;
                 min-height: 2.5em;
-                font-weight: 500;
+                font-weight: bold;
                 line-height: 2.5em;
                 white-space: nowrap;
                 color: #fff;
