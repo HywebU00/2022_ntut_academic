@@ -280,6 +280,9 @@ table {
           a{
             display: block;
             padding: 1em;
+            &:hover, &:focus{
+                text-decoration: underline;
+            }
         }
 
     }

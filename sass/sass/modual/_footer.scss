@@ -2,7 +2,7 @@ footer {
     box-sizing: border-box;
     @include clearfix;
     text-align: left;
-    font-size: 0.813em;
+    font-size: 0.938em;
     padding: .2em 0;
     background: rgb(1,87,101);
     background: -moz-linear-gradient(180deg, rgba(1,87,101,1) 10%, rgba(3,64,90,1) 80%);
@@ -44,10 +44,10 @@ footer {
     .footer_icon {
         flex:0 1 200px;
         @include screen('tablet') {
-         flex:1 1 100%; 
-         text-align: right;
-     }
- }
+           flex:1 1 100%; 
+           text-align: right;
+       }
+   }
     // 版權連結
     .footer_link {
         @include li-reset();
@@ -73,7 +73,7 @@ footer {
                 background: #eee;
             }
             &:last-child{
-             &:before{
+               &:before{
                 display: none;
             } 
             @include screen('mobile') {

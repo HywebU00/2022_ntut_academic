@@ -98,6 +98,7 @@
       color:$primaryColor;
       &:hover, &:focus{
         color:$secondaryColor;
+        text-decoration: underline;
       }
     }
   }
