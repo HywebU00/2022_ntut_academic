@@ -2,9 +2,9 @@
     &:before {
         content: "";
         display: inline-block;
-        height: .75em;
-        width: .75em; 
-        vertical-align: top .3em;
+        height: 1em;
+        width: 1em; 
+        vertical-align: top .5em;
     }
 }
 @mixin hyui_icon($icon_img) {

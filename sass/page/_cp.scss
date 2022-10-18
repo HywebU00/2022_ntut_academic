@@ -3,6 +3,7 @@
 h1.title, h2.title {
   line-height: 1.25em;
   margin: .4em 0 1em;
+  font-weight: bold;
   @include screen('mobile') {
     margin: .4em 0 .2em;
   }

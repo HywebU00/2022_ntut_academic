@@ -64,7 +64,7 @@
     left: 0;
     right: 0;
     clear: both;
-    padding: 20px 20px 30px;
+    padding: 1em 2em;
     display: none;
     @include screen('mobile') {
         position: static;
@@ -79,12 +79,14 @@
         border-bottom: 1px #D9D9D9 solid;
         position: relative;
         &:before{
-            content:'·';
+            content:'';
             position: absolute;
             left:.5em;
             top:.5em;
             width: 1em;
-            height: 1em;
+            height: 1.5em;
+            background: url('../images/li-dot.png')no-repeat center top .6em;
+            background-size: 5px auto;
         }
         @include screen('mobile') {
             @include text-overflow();

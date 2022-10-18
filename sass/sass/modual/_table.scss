@@ -82,7 +82,7 @@ table {
                 position: absolute;
                 top: .5em;
                 left: .5em;
-                width: 4em;
+                width: 8em;
                 padding-right: 10px;
                 white-space: normal;
                 text-align: left;
@@ -303,6 +303,21 @@ table {
     }
 }
 
+}
+
+.mail{
+    text-align: center;
+    a{
+        display: block;
+        padding-top: .3em;
+        img{
+            width: 24px;
+            height: auto;
+        }
+        @include screen('mobile') {
+         padding-top: 0; 
+     }
+ }
 }
 .resroom{
     list-style: none;

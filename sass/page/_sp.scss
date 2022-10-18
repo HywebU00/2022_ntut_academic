@@ -84,9 +84,29 @@
         padding: 0;
       }
     }
+    ul{
+      list-style: none;
+      margin: .5em 0;
+      padding: 0;
+      li{
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 1.5em;
+        &:before{
+          content:'';
+          position: absolute;
+          left:.5em;
+          top:.5em;
+          width: 1em;
+          height: 1.5em;
+          background: url('../images/li-dot.png')no-repeat left top .3em;
+          background-size: 5px auto;
+        }
+      }
+    }
     .btn{
       background: #fff;
-      padding: .2em 1em .25em .5em;
+      padding: .2em 1em .2em .5em;
       color:$primaryColor;
       border-radius: 5px;
       border: solid 1px $color-gray;
@@ -94,8 +114,22 @@
         color:$secondaryColor;
       }
     }
+    .i_mail3{
+      &:before{
+        width: .75em;
+        height: .75em;
+      }
+    }
+    .i_grid3{
+      &:before{
+        width: .75em;
+        height: .75em;
+      }
+    }
     a{
       color:$primaryColor;
+      display: block;
+      padding: .2em 0;
       &:hover, &:focus{
         color:$secondaryColor;
         text-decoration: underline;
@@ -126,7 +160,7 @@
   background-color: rgba(0, 0, 0, .3);
 }
 .tabContent{
-  height: 22em;
+  height: 23em;
   overflow-y: auto;
 }
 .table_list{
@@ -170,12 +204,14 @@
     border-bottom: 1px #D9D9D9 solid;
     position: relative;
     &:before{
-      content:'·';
+      content:'';
       position: absolute;
       left:.5em;
       top:.5em;
       width: 1em;
-      height: 1em;
+      height: 1.5em;
+      background: url('../images/li-dot.png')no-repeat center top .6em;
+      background-size: 5px auto;
     }
     a {
       @include aSetting_nocolor;
@@ -184,21 +220,26 @@
   }
 }
 .btn{
-  background: $color-blue;
-  padding: .2em 1em .25em .5em;
-  color:#fff;
+  background: $color-gray2;
+  padding: .2em .15em .1em;
+  margin: .3em .6em .3em 0;
+  color:$btn-word;
   border-radius: 5px;
+  min-width: auto;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .2);
   &:hover, &:focus{
-    background: darken($color-blue, 5);
+    background: darken($color-gray2, 3);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .2);
   }
 }
 .btngrp{
-
+  display: inline-block;
+  margin-left: .5em;
 }
 }
 
 .quicklink{
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .1);
   border-radius: 5px;
   position: fixed;
