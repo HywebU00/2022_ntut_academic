@@ -153,7 +153,7 @@
         display: flex;
         .navlist {
             flex: 1 0 auto;
-            margin: .5em 15em 0 0;
+            margin: .5em 16em 0 0;
             z-index:999;
             // max-width: calc(100% - 15em);
             ul {
@@ -255,7 +255,7 @@
         .btn-search {
             min-width: 2em!important;
             padding: 0.2em 0.8em;
-            margin: 3px 1px 0 -2.2em;
+            margin: 1px 1px 0 -2.2em;
             position: relative;
             border: 1px solid #fff;
             color: rgba(255, 255, 255, 0);

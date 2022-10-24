@@ -117,3 +117,110 @@ body {
 }
 
 
+.admLogin{
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .3);
+    padding: 2em;
+    width: 500px;
+    margin:8vh auto 2vh;
+    @include screen('mobile') {
+        width: 80%;
+    }
+    h1{
+        text-align: center;
+        line-height: 1.3em;
+        font-weight: 500;
+        color:$primaryColor;
+    }
+    .form_title{
+        max-width: 0;
+        flex: 0 0 0;
+        align-self: flex-start;
+        padding: 0.65em 0; 
+        font-size: 0; 
+    }
+    .form_content{
+        max-width: calc(100% - 0px);
+        flex-basis: calc(100% - 0px);
+    }
+
+    .i_hide, .i_show{
+        &:before{
+            vertical-align: middle;
+        }
+    }
+    .vercode{
+        @include screen('mobile') {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .btn-icon{
+            position: static;
+            width: 40px;
+            height: 40px;
+            margin: .2em;
+
+
+        }
+        .input-i{
+            input{
+                width: 10em;
+                padding-right:0;
+            }
+            @include screen('mobile') {
+                input{
+                    width: 96%;
+                }
+            }
+        }
+        .btn-reflash{
+            flex:0 0 auto;
+            background: $color-yellow;
+            border-radius: 50%;
+            padding: 0;
+            width: 42px;
+            height: 42px;
+            margin: .2em .5em;
+            border: none;
+            .i_reflash{
+                &:before{
+                    vertical-align: middle;
+                }
+            }
+        }
+        .btn-vint{
+            flex:0 0 auto;
+            background: $color-yellow;
+            border-radius: 50%;
+            padding: 0;
+            width: 42px;
+            height: 42px;
+            margin: .2em .5em;
+            border: none;
+            .i_show:before{
+               width: 1.5em;
+               height: 1.5em;
+               vertical-align: middle;
+           }
+       }
+       .labelEffect{
+        @include screen('mobile') {
+           display: block;
+       }
+   }
+}
+.forget{
+    padding:.5em 1em;
+    text-align: right;
+    a{
+        padding: .3em 1em;
+        border-radius: 5px;
+        color:$primaryColor;
+        &:hover, &:focus{
+            background: $secondaryColor;
+            color:#fff;
+        }
+    }
+}
+}
