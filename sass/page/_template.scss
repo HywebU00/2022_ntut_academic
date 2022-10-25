@@ -64,7 +64,7 @@ body {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
-        min-height: 760px;
+        // min-height: 760px;
         padding: 0px 30px 2em;
         @include screen('mobile') {
             padding: 20px 30px 2em;
