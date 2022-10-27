@@ -54,7 +54,7 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-bottom: 3em;
+    padding-bottom: 0;
 
     >.container {
         @include gutter(); //gutter 代表左右要留白
@@ -64,10 +64,10 @@ body {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
-        // min-height: 760px;
-        padding: 0px 30px 2em;
+        min-height: 760px;
+        padding: 0px 30px 0;
         @include screen('mobile') {
-            padding: 20px 30px 2em;
+            padding: 20px 30px 5px;
             min-height: auto;
 
         }
@@ -199,16 +199,16 @@ body {
             margin: .2em .5em;
             border: none;
             .i_show:before{
-               width: 1.5em;
-               height: 1.5em;
-               vertical-align: middle;
-           }
-       }
-       .labelEffect{
+             width: 1.5em;
+             height: 1.5em;
+             vertical-align: middle;
+         }
+     }
+     .labelEffect{
         @include screen('mobile') {
-           display: block;
-       }
-   }
+         display: block;
+     }
+ }
 }
 .forget{
     padding:.5em 1em;
