@@ -159,16 +159,17 @@ h1.title, h2.title {
         }
       }
     }
-    $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other ;
+    $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other, png ;
     @each $fileType in $fileType {
       span.file_#{$fileType} {
         a{
           color:#fff;
           font-weight: bold;
-          padding: .2em .8em;
+          padding: .1em .6em;
           border-radius: 3px;
           &:hover, &:focus{
             color:#fff;
+            text-decoration: none;
           }
         }
       }
@@ -178,7 +179,7 @@ h1.title, h2.title {
         a{
           background: #275cb7;
           &:hover, &:focus{
-            background: darken(#275cb7, 5%);
+            background: darken(#275cb7, 10%);
           }
         }
       }
@@ -186,7 +187,7 @@ h1.title, h2.title {
         a{
           background: #387947;
           &:hover, &:focus{
-            background: darken(#387947, 5%);
+            background: darken(#387947, 10%);
           }
         }
       }
@@ -194,7 +195,7 @@ h1.title, h2.title {
         a{
           background: #c55a3b;
           &:hover, &:focus{
-            background: darken(#c55a3b, 5%);
+            background: darken(#c55a3b, 10%);
           }
         }
       }
@@ -202,7 +203,7 @@ h1.title, h2.title {
         a{
           background: #c00;
           &:hover, &:focus{
-            background: darken(#c00, 5%);
+            background: darken(#c00, 10%);
           }
         }
       }
@@ -210,7 +211,7 @@ h1.title, h2.title {
         a{
           background: #eb712e;
           &:hover, &:focus{
-            background: darken(#eb712e, 5%);
+            background: darken(#eb712e, 10%);
           }
         }
       }
@@ -218,7 +219,7 @@ h1.title, h2.title {
         a{
           background: #555;
           &:hover, &:focus{
-            background: darken(#555, 5%);
+            background: darken(#555, 10%);
           }
         }
       }
@@ -226,7 +227,7 @@ h1.title, h2.title {
         a{
           background: #009999;
           &:hover, &:focus{
-            background: darken(#009999, 5%);
+            background: darken(#009999, 10%);
           }
         }
       }
@@ -234,15 +235,15 @@ h1.title, h2.title {
         a{
           background: #088ecc;
           &:hover, &:focus{
-            background: darken(#088ecc, 5%);
+            background: darken(#088ecc, 10%);
           }
         }
       }
-      &.file_jpg{
+      &.file_jpg, &.file_png{
         a{
           background: #6c29a4;
           &:hover, &:focus{
-            background: darken(#6c29a4, 5%);
+            background: darken(#6c29a4, 10%);
           }
         }
       }
@@ -250,7 +251,7 @@ h1.title, h2.title {
         a{
           background: #430a1f;
           &:hover, &:focus{
-            background: darken(#430a1f, 5%);
+            background: darken(#430a1f, 10%);
           }
         }
       }
