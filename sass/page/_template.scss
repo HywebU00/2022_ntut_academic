@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+:root {
+    scroll-padding-top: 60px;
+}
 html {
     scroll-behavior: smooth;
 }
