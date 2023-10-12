@@ -1,62 +1,63 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>網頁維護中</title>
+<!doctype html>
+    <html lang="zh-Hant" class="no-js">
+
+    <head>
+        <meta name="robots" content="noindex"><!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>404!抱歉!找不到您的頁面！</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box
         }
-
         body {
-            background: #007c74;
+            background: #035167;
             color: #FFF
         }
-
         .wrapper {
             width: 100%;
             max-width: 800px;
             margin: 0px auto;
             padding: 1em
         }
-
         .wrapper h1 {
-            font-size: 6em;
+            font-size: 10em;
             display: block;
             float: left;
             width: 50%;
             text-align: right;
-            margin: 40px 30px 15px 0;
+            margin: 0 30px 15px 0;
             font-family: sans-serif
         }
-
         .wrapper h2 {
             overflow: hidden;
             font-size: 2em;
             padding-top: 2em
         }
-
         .wrapper .error {
             clear: both;
             text-align: center
         }
-
         .wrapper .error h3 {
             margin-bottom: 1em
         }
-
         .wrapper .error h3 small {
             display: block
         }
-
         .btn_grp {
             clear: both;
             margin: 2em 0;
             text-align: center
         }
-
         .btn_grp a {
             display: inline-block;
             border-radius: 5px;
@@ -69,13 +70,11 @@
             text-decoration: none;
             transition: .3s ease-out
         }
-
         .btn_grp a:hover, .btn_grp a:focus {
-            background: rgba(0,0,0,.2);
+            background: rgba(0, 0, 0, .2);
             box-shadow: none;
             outline: none
         }
-
         @media screen and (max-width:767px) {
             .wrapper h1 {
                 float: none;
@@ -83,113 +82,36 @@
                 line-height: 1;
                 text-align: center;
                 width: 100%;
-                font-size: 8em;
+                font-size: 8em
             }
-
-
             .wrapper h2 {
                 clear: both;
                 text-align: center;
                 margin: 0;
                 padding: 0
             }
-
             .wrapper .error {
                 margin-top: 1em
             }
         }
-        @media screen and (max-width:399px) {
-            .wrapper h1 img {
-                width: 90%;
-            }
-
-        }
     </style>
-    <script src="/Content/js/jquery.min.js"></script>
 </head>
+
 <body>
     <div class="wrapper">
+        <h1>404</h1>
+        <h2>抱歉！<br>找不到您的頁面！</h2>
         <div class="error">
-            <h1><img src="images/error.png" alt="錯誤"></h1>
-            <h2>
-                網頁維護中
-            </h2>
-            <h3>請稍後再試，如造成不便，敬請見諒。</h3>
-            
-
+            <h3>您瀏覽的網頁不存在,請再重新檢視 <small>The page you're visiting does not exit, please click.</small>
+            </h3>
+            <h3>將在<span>2</span>秒後自動跳轉到首頁 <small>be redirected to homepage automatically in <span>2</span> seconds.</small>
+            </h3>
         </div>
-        <style id="antiClickjack">
-            body {
-                display: none !important;
-            }
-        </style>
-        <script type="text/javascript">
-            if (self == top) {
-                var antiClickjack = document.getElementById("antiClickjack");
-                antiClickjack.parentNode.removeChild(antiClickjack);
-                document.documentElement.style.display = 'block';
-            }
-            else {
-                top.location = self.location;
-            }
-        </script>
-    </body>
-    </html>
-    <script type="text/javascript">
-        function getReturnUrl(link) {
-            var arr = link.split("/");
-            var returnUrl = "";
-            var checkUrl = "";
-            if (arr.length > 3) {
-                link = arr[0] + "//" + arr[2] + "/" + arr[3];
-                checkUrl = arr[0] + "//" + arr[2] + "/umbraco/surface/Ini/GetReturnUrl?fromLink=" + link;
-                $.ajax({
-                    type: "get",
-                    url: checkUrl,
-                    cache: false,
-                    async: false,
-                    success: function (result) {
-                        returnUrl = result;
-                    }
-                });
-            } else {
-                returnUrl = arr[0] + "//" + arr[2];
-            }
-            return returnUrl;
-        }
+        <div class="btn_grp">
+            <a href="javascript:history.back()" class="btn">回上一頁</a>
+            <a href="#" class="btn">回首頁</a>
+        </div>
+    </div>
+</body>
 
-        function goHome() {
-            var url = window.location.href;
-            var goUrl = "";
-            if (document.referrer != null && document.referrer != "" && !document.referrer.includes("google")) {
-                url = document.referrer;
-            }
-            goUrl = getReturnUrl(url);
-        //console.log("window.location.href:" + window.location.href+"   url:" + url+ "  goUrl:" + goUrl);
-        /*
-        var arr = url.split("/");
-        goUrl = arr[0] + "//" + arr[2];
-
-        if (arr.length > 5) {
-            for (i = 3; i < arr.length - 1; i++) {
-                goUrl += "/" + arr[i];
-            }
-        }
-        */
-            window.location.href = goUrl;
-        }
-
-    var num = 3; //倒計時的秒數
-    window.setTimeout("doUpdate()", 1000);
-    function doUpdate() {
-        if (num != 0) {
-            document.getElementById('page_div').innerHTML = '將在' + num + '秒後自動跳轉到首頁' + '<small> be redirected to homepage automatically in ' + num + 'seconds. </small>';
-
-            num--;
-            window.setTimeout("doUpdate()", 1000);
-        } else {
-            num = 3;
-            goHome();
-        }
-    }
-</script>
+</html>
