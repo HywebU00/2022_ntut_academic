@@ -27,7 +27,8 @@ table {
         // word-break: break-all;
         // background: #fff;
         a {
-            word-break: break-all;
+            // word-break: break-all;
+            word-break: break-word;
         }
     }
     th {
@@ -337,9 +338,9 @@ table {
             height: auto;
         }
         @include screen('mobile') {
-         padding-top: 0; 
-     }
- }
+           padding-top: 0; 
+       }
+   }
 }
 .resroom{
     list-style: none;
